@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Opt-Out</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Opt-Out from Email Marketing</span>
+              <p>
+                If you no longer wish to receive our marketing emails, please
+                enter your email address below and click the "Unsubscribe"
+                button.
+              </p>
+              <!-- Remove the form element -->
+              <button
+                class="btn waves-effect waves-light"
+                type="button"
+                id="unsubscribe-button"
+              >
+                Unsubscribe
+              </button>
+            </div>
+            <div class="card-action">
+              <!-- Display "Successfully unsubscribed" here without the form -->
+              <div
+                id="success-message"
+                class="green-text"
+                style="display: none"
+              >
+                Successfully unsubscribed.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to show the success message when the button is clicked
+      document
+        .getElementById("unsubscribe-button")
+        .addEventListener("click", function () {
+          document.getElementById("success-message").style.display = "block";
+        });
+    </script>
+  </body>
+</html>
